@@ -85,7 +85,7 @@ public class TriangleTests {
      * @param x3 - Axis X coordinate of vertex 3
      * @param y3 - Axis Y coordinate of vertex 3
      */
-    private void setTriangleTestData(Integer x1, Integer y1, Integer x2, Integer y2, Integer x3, Integer y3) {
+    private void setTriangleTestData(int x1, int y1, int x2, int y2, int x3, int y3) {
         when(Triangle.getX1()).thenReturn(x1);
         when(Triangle.getY1()).thenReturn(y1);
         when(Triangle.getX2()).thenReturn(x2);
@@ -135,7 +135,7 @@ public class TriangleTests {
      * @param vectorY - Axis Y coordinate of vector
      * @return Tangent of vector angle
      */
-    private double GetTangent(Integer vectorX, Integer vectorY) {
+    private double GetTangent(int vectorX, int vectorY) {
         return (double)(vectorY)/(vectorX);
     }
 }

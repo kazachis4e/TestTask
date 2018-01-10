@@ -35,7 +35,7 @@ public class FizzBuzz {
      * Write input integer message to console
      * @param message - Message to write
      */
-    private static void Write(Integer message) {
+    private static void Write(int message) {
         Write(Integer.toString(message));
     }
 

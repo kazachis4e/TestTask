@@ -5,20 +5,20 @@ package task2_tests;
  */
 public class Point {
 
-    private Integer X;
+    private int X;
 
-    private Integer Y;
+    private int Y;
 
-    public Point(Integer x, Integer y) {
+    public Point(int x, int y) {
         X = x;
         Y = y;
     }
 
-    public Integer getX() {
+    public int getX() {
         return X;
     }
 
-    public Integer getY() {
+    public int getY() {
         return Y;
     }
 
