@@ -24,7 +24,6 @@ public class TriangleTests {
     private void InitTriangle() {
         MockitoAnnotations.initMocks(this);
 
-
         setTriangleTestData(1, 1, 1, 3, 3, 1);
         when(TriangleProvider.getTriangle()).thenReturn(Triangle);
     }
@@ -50,8 +49,8 @@ public class TriangleTests {
         // Check tangent of any two vectors
         Point vector1 = getVectorByVertices(vertices[0], vertices[1]);
         Point vector2 = getVectorByVertices(vertices[1], vertices[2]);
-        double firstTang = (double)(vector1.getX())/(vector1.getY());
-        double secondTang = (double)(vector2.getX())/(vector2.getY());
+        double firstTang = GetTangent(vector1.getY(),vector1.getX());
+        double secondTang = GetTangent(vector2.getY(),vector2.getX());
 
         double epsilon = 1e-10;
         assertFalse(Math.abs(firstTang - secondTang) <= epsilon, "All vertices are on same line");
@@ -128,5 +127,15 @@ public class TriangleTests {
      */
     private boolean isVectorsOrthogonal(Point vectorA, Point vectorB) {
         return vectorA.getX()*vectorB.getX() + vectorA.getY()*vectorB.getY() == 0;
+    }
+
+    /**
+     * Calculate tangent of vector angle
+     * @param vectorX - Axis X coordinate of vector
+     * @param vectorY - Axis Y coordinate of vector
+     * @return Tangent of vector angle
+     */
+    private double GetTangent(Integer vectorX, Integer vectorY) {
+        return (double)(vectorY)/(vectorX);
     }
 }
